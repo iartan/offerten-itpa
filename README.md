@@ -1,3 +1,3 @@
-# Python Flask Sample Application
+# Öffentlicher Code für Diplomarbeit
 
-This is a sample Flask application.
+Dieses Repository enthält ausgewählte Teile des Codes, die für die Diplomarbeit entwickelt wurden
