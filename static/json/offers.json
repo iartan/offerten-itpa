@@ -1,0 +1,112 @@
+[
+    {
+        "client_id": 12,
+        "client_name": "Badenoch & Clark",
+        "date": "2023-01-01",
+        "project_name": "Project A",
+        "project_id": 1,
+        "status": "Active",
+        "licence_costs": 200,
+        "service_costs": 500,
+        "invoicing": "Quarterly"
+    },
+    {
+        "client_id": 15,
+        "client_name": "Faber Ltd.",
+        "date": "2023-02-15",
+        "project_name": "Project B",
+        "project_id": 2,
+        "status": "Inactive",
+        "licence_costs": 300,
+        "service_costs": 600,
+        "invoicing": "Monthly"
+    },
+    {
+        "client_id": 18,
+        "client_name": "Ember Corp.",
+        "date": "2023-03-10",
+        "project_name": "Project C",
+        "project_id": 3,
+        "status": "Active",
+        "licence_costs": 400,
+        "service_costs": 700,
+        "invoicing": "Annually"
+    },
+    {
+        "client_id": 21,
+        "client_name": "Acme Inc.",
+        "date": "2023-04-01",
+        "project_name": "Project D",
+        "project_id": 4,
+        "status": "Inactive",
+        "licence_costs": 500,
+        "service_costs": 800,
+        "invoicing": "Quarterly"
+    },
+    {
+        "client_id": 24,
+        "client_name": "Stark Industries",
+        "date": "2023-05-20",
+        "project_name": "Project E",
+        "project_id": 5,
+        "status": "Active",
+        "licence_costs": 600,
+        "service_costs": 900,
+        "invoicing": "Monthly"
+    },
+    {
+        "client_id": 27,
+        "client_name": "Wayne Enterprises",
+        "date": "2023-06-15",
+        "project_name": "Project F",
+        "project_id": 6,
+        "status": "Active",
+        "licence_costs": 700,
+        "service_costs": 1000,
+        "invoicing": "Annually"
+    },
+    {
+        "client_id": 30,
+        "client_name": "Oscorp",
+        "date": "2023-07-01",
+        "project_name": "Project G",
+        "project_id": 7,
+        "status": "Inactive",
+        "licence_costs": 800,
+        "service_costs": 1100,
+        "invoicing": "Quarterly"
+    },
+    {
+        "client_id": 33,
+        "client_name": "Daily Bugle",
+        "date": "2023-08-10",
+        "project_name": "Project H",
+        "project_id": 8,
+        "status": "Active",
+        "licence_costs": 900,
+        "service_costs": 1200,
+        "invoicing": "Monthly"
+    },
+    {
+        "client_id": 36,
+        "client_name": "Parker Industries",
+        "date": "2023-09-01",
+        "project_name": "Project I",
+        "project_id": 9,
+        "status": "Inactive",
+        "licence_costs": 1000,
+        "service_costs": 1300,
+        "invoicing": "Annually"
+    },
+    {
+        "client_id": 39,
+        "client_name": "Queen Industries",
+        "date": "2023-10-20",
+        "project_name": "Project J",
+        "project_id": 10,
+        "status": "Active",
+        "licence_costs": 1100,
+        "service_costs": 1400,
+        "invoicing": "Quarterly"
+    }
+]

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Offertenübersicht{% endblock %}
+{% block head_scripts %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css">
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Setup - add a text input to each footer cell
+			$('#myTable tfoot th').each(function () {
+				var title = $(this).text();
+				$(this).html('<input type="text" placeholder="Search ' + title + '" />');
+			});
+
+			// DataTable
+			var table = $('#myTable').DataTable({
+				initComplete: function () {
+					// Apply the search
+					this.api()
+						.columns()
+						.every(function () {
+							var that = this;
+
+							$('input', this.footer()).on('keyup change clear', function () {
+								if (that.search() !== this.value) {
+									that.search(this.value).draw();
+								}
+							});
+						});
+				},
+			});
+		});
+	</script>
+{% endblock %}
+{% block body %}
+	<main>
+		<section id="offers">
+			<table style="width: 100%; table-layout: fixed; " id="myTable">
+				<thead>
+					<tr>
+						<th>Kundennummer</th>
+						<th>Kundenname</th>
+						<th>Datum</th>
+						<th>Projekt</th>
+						<th>Projektnummer</th>
+						<th>Status</th>
+						<th>Lizenzkosten</th>
+						<th>Dienstleistungskosten</th>
+						<th>Verrechnung</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in data %}
+					<tr>
+						<th scope="row">{{ item.client_id }}</th>
+						<td>{{ item.client_name }}</td>
+						<td>{{ item.date }}</td>
+						<td>{{ item.project_name }}</td>
+						<td>{{ item.project_id }}</td>
+						<td>{{ item.status }}</td>
+						<td>{{ item.licence_costs }}</td>
+						<td>{{ item.service_costs }}</td>
+						<td>{{ item.invoicing }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+				<tfoot>
+					<tr>
+						<th>Kundennummer</th>
+						<th>Kundenname</th>
+						<th>Datum</th>
+						<th>Projekt</th>
+						<th>Projektnummer</th>
+						<th>Status</th>
+						<th>Lizenzkosten</th>
+						<th>Dienstleistungskosten</th>
+						<th>Verrechnung</th>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+	</main>
+	
+	<script src="{{ url_for('static', filename='js/minimal-theme-switcher.js') }}"></script>
+{% endblock %}

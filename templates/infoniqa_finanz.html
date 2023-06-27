@@ -1,0 +1,120 @@
+<section id="calculation" x-data='window.data'>
+    <style>
+        table {
+            width: 100%;  /* Ensures the table takes the full width */
+            table-layout: fixed;  
+        }
+        tr {
+            /* border-bottom: 2px solid #ff0000; */
+        }
+        th, 
+        td {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        input.small-input {
+            margin: -10px 0px -10px 0px !important;
+            padding: 0px 0px 0px 5px !important;
+            height: 80% !important;
+        }
+
+    </style>
+    
+    <table>
+        <thead>
+            <tr>
+                <th scope="col" style="width: 30%;">Modul</th>
+                <th scope="col" style="width: 10%;">User</th>
+                <th scope="col" style="width: 10%;">Bruttopreis</th>
+                <th scope="col" style="width: 10%;">Rabatt %</th>
+                <th scope="col" style="width: 10%;">Nettopreis</th>
+                <th scope="col" style="width: 10%;">Wartung %</th>
+                <th scope="col" style="width: 10%;">Wartungskosten</th>
+                <th scope="col" style="width: 5%;"></th>
+            </tr>
+        </thead>
+        <template x-for="(mainModule, index) in priceList.mainModules" :key="`main-${index}`">
+            <tbody>
+                <!-- This is the row for the main module -->
+                <tr>
+                    <th scope="row" x-text="mainModule.name"></th>
+                    <td>1</td>
+                    <td x-text="getMainModuleTotalGrossPrice(mainModule)"></td>
+                    <td>
+                        <input class="small-input" type="number" min="0" x-model="mainModule.discount" x-init="mainModule.discount = 15"/>
+                    </td> <!-- Rabatt -->
+                    <td x-text="getMainModuleTotalNetPrice(mainModule)"></td>
+                    <td>
+                        <input class="small-input" type="number" min="0" x-model="mainModule.maintenance" x-init="mainModule.maintenance = 16"/>
+                    </td> <!-- Wartung -->
+                    <td x-text="getMainModuleTotalMaintenance(mainModule)"></td> <!-- Total of the whole main module comes here -->
+                    <td></td>
+                </tr>
+
+                <!-- Now we're looping through each 'module' within the 'mainModule' -->
+                <template x-for="(module, subIndex) in mainModule.modules" :key="`sub-${index}-${subIndex}`">
+                    <tr>
+                        <th scope="row" x-text="module.name"></th>
+                        <td></td> <!-- User -->
+                        <td x-text="(module.price).toFixed(2)"></td> <!-- Bruttopreis -->
+                        <td>
+                            <!-- <input class="small-input" type="number" min="0" x-model="module.discount" x-init="module.discount = 15"/> -->
+                        </td> <!-- Rabatt -->
+                        <td x-effect="module.netPrice = (module.price - (module.price * (mainModule.discount / 100)))" x-text="(module.netPrice).toFixed(2)"></td>
+
+                        <td>
+                            <!-- <input class="small-input" type="number" min="0" x-model="module.maintenance" x-init="module.maintenance = 16"/> -->
+                        </td> <!-- Wartung -->
+                        <td x-effect="module.total = (module.price * (mainModule.maintenance / 100))" x-text="(module.total).toFixed(2)" x-model="module.total"></td> <!-- Gesamt -->
+                        <td>
+                            <input type="checkbox" id="checkboxNoLabel" value="" x-model="module.checked">
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </template>
+        <!-- This is the row for the grand totals -->
+        <tr>
+            <th scope="row" colspan="2">Total einmalige Lizenzkosten in CHF</th>
+            <td x-text="getGrandTotalGrossPrice()"></td>
+            <th scope="row"></th>
+            <td x-text="getGrandTotalNetPrice()"></td>
+        </tr>
+        <tr>
+            <th scope="row" colspan="6">Wartungsvertrag pro Jahr in CHF</th>
+            <td x-text="getGrandTotalMaintenance()"></td>
+        </tr>
+    </table>
+</section>
+
+<section id="preview">
+    <!-- Maybe I need this later on -->
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    window.data = {
+        priceList: {{ priceList | tojson | safe }},
+        getMainModuleTotalMaintenance(mainModule) {
+            return mainModule.modules.reduce((acc, module) => acc + (module.checked ? module.total || 0 : 0), 0).toFixed(2);
+        },
+        getMainModuleTotalGrossPrice(mainModule) {
+            return mainModule.modules.reduce((acc, module) => acc + (module.checked ? module.price || 0 : 0), 0).toFixed(2);
+        },
+        getMainModuleTotalNetPrice(mainModule) {
+            return mainModule.modules.reduce((acc, module) => acc + (module.checked ? module.netPrice || 0 : 0), 0).toFixed(2);
+        },
+        getGrandTotalGrossPrice() {
+            return this.priceList.mainModules.reduce((acc, mainModule) => acc + parseFloat(this.getMainModuleTotalGrossPrice(mainModule)), 0).toFixed(2);
+        },
+        getGrandTotalNetPrice() {
+            return this.priceList.mainModules.reduce((acc, mainModule) => acc + parseFloat(this.getMainModuleTotalNetPrice(mainModule)), 0).toFixed(2);
+        },
+        getGrandTotalMaintenance() {
+            return this.priceList.mainModules.reduce((acc, mainModule) => acc + parseFloat(this.getMainModuleTotalMaintenance(mainModule)), 0).toFixed(2);
+        },
+    };
+    Alpine.start();
+});
+</script>

@@ -1,0 +1,212 @@
+[
+    {
+        "clientId": "001",
+        "clientName": "Acme Corp",
+        "licenses": [
+            {
+                "licenseName": "Finanzbuchhaltung",
+                "isActive": true
+            },
+            {
+                "licenseName": "Kreditorenbuchhaltung",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "002",
+        "clientName": "Global Enterprises",
+        "licenses": [
+            {
+                "licenseName": "Kostenrechnung Standard",
+                "isActive": true
+            },
+            {
+                "licenseName": "Kostenrechnung Extended",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "003",
+        "clientName": "Innovate Technologies",
+        "licenses": [
+            {
+                "licenseName": "Mittelflussrechnung",
+                "isActive": true
+            },
+            {
+                "licenseName": "Buchungskreise",
+                "isActive": true
+            }
+        ]
+    },
+    {
+        "clientId": "004",
+        "clientName": "NextGen Solutions",
+        "licenses": [
+            {
+                "licenseName": "Verbandmanagement",
+                "isActive": false
+            },
+            {
+                "licenseName": "Differenzmanagement",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "005",
+        "clientName": "Pioneer Holdings",
+        "licenses": [
+            {
+                "licenseName": "Lohnbuchhaltung und Personaladministration",
+                "isActive": true
+            },
+            {
+                "licenseName": "Personalinformationssystem (PIS): Bewerbung, Entwicklung/ Ausbildung, Qualifikation",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "006",
+        "clientName": "Quantum Dynamics",
+        "licenses": [
+            {
+                "licenseName": "Personaldokumentenmanagement (PDM)",
+                "isActive": true
+            },
+            {
+                "licenseName": "Absenzenmanagement",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "007",
+        "clientName": "Revolution Designs",
+        "licenses": [
+            {
+                "licenseName": "Spesenmanagement",
+                "isActive": false
+            },
+            {
+                "licenseName": "Zeugnismanager",
+                "isActive": true
+            }
+        ]
+    },
+    {
+        "clientId": "008",
+        "clientName": "Synergy Concepts",
+        "licenses": [
+            {
+                "licenseName": "Debitorenbuchhaltung",
+                "isActive": true
+            },
+            {
+                "licenseName": "Kontokorrent",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "009",
+        "clientName": "Triumph Ventures",
+        "licenses": [
+            {
+                "licenseName": "Nettolohnausgleich (Taggelder)",
+                "isActive": true
+            },
+            {
+                "licenseName": "E-Mail Versand Lohnabrechnung",
+                "isActive": true
+            }
+        ]
+    },
+    {
+        "clientId": "010",
+        "clientName": "Universal Innovations",
+        "licenses": [
+            {
+                "licenseName": "Kostenrechnung Advanced",
+                "isActive": true
+            },
+            {
+                "licenseName": "Erweitertes Zinsrechnen",
+                "isActive": true
+            }
+        ]
+    },
+    {
+        "clientId": "011",
+        "clientName": "Venture Industries",
+        "licenses": [
+            {
+                "licenseName": "Bankerfassung",
+                "isActive": false
+            },
+            {
+                "licenseName": "Periodische Konsolidierung",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "012",
+        "clientName": "Worldwide Solutions",
+        "licenses": [
+            {
+                "licenseName": "Anlagebuchhaltung",
+                "isActive": true
+            },
+            {
+                "licenseName": "Bilanzkonto-Splitting",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "013",
+        "clientName": "Xenith Dynamics",
+        "licenses": [
+            {
+                "licenseName": "Datenexport Direct (Flaffile)",
+                "isActive": false
+            },
+            {
+                "licenseName": "Einheitliches Lohnmeldeverfahren (ELM)",
+                "isActive": true
+            }
+        ]
+    },
+    {
+        "clientId": "014",
+        "clientName": "Yonder Enterprises",
+        "licenses": [
+            {
+                "licenseName": "E-Rekrutierung (Refline)",
+                "isActive": true
+            },
+            {
+                "licenseName": "Zeugnismanager (Flat-Fee)",
+                "isActive": false
+            }
+        ]
+    },
+    {
+        "clientId": "015",
+        "clientName": "Zenith Innovations",
+        "licenses": [
+            {
+                "licenseName": "Kostenrechnung Standard",
+                "isActive": false
+            },
+            {
+                "licenseName": "Kostenrechnung Advanced",
+                "isActive": true
+            }
+        ]
+    }
+]

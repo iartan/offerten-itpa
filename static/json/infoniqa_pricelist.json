@@ -1,0 +1,257 @@
+{
+    "mainModules": [
+        {
+            "name": "Finanz",
+            "description": "",
+            "modules": [
+                {
+                    "name": "Finanzbuchhaltung",
+                    "description": "Key figures/Offline Budget",
+                    "price": 6190
+                },
+                {
+                    "name": "Debitorenbuchhaltung",
+                    "description": "",
+                    "price": 6190
+                },
+                {
+                    "name": "Kreditorenbuchhaltung",
+                    "description": "",
+                    "price": 6190
+                },
+                {
+                    "name": "Kostenrechnung Standard",
+                    "description": "Betriebliche Erfolgsanalyse",
+                    "price": 6190
+                },
+                {
+                    "name": "Kostenrechnung Advanced",
+                    "description": "Standard + Projekte",
+                    "price": 8610
+                },
+                {
+                    "name": "Kostenrechnung Extended",
+                    "description": "Advanced + Leistungsmgmt. + Kalkulationsmgmt.",
+                    "price": 16260
+                },
+                {
+                    "name": "Anlagebuchhaltung",
+                    "description": "",
+                    "price": 6190
+                },
+                {
+                    "name": "Buchungskreise",
+                    "description": "",
+                    "price": 1260
+                },
+                {
+                    "name": "Mittelflussrechnung",
+                    "description": "",
+                    "price": 2420
+                },
+                {
+                    "name": "Erweitertes Zinsrechnen",
+                    "description": "",
+                    "price": 1260
+                },
+                {
+                    "name": "Bankerfassung",
+                    "description": "nur mit Debi und Kredi einsetzbar",
+                    "price": 1260
+                },
+                {
+                    "name": "Periodische Konsolidierung",
+                    "description": "",
+                    "price": 1260
+                },
+                {
+                    "name": "Kontokorrent",
+                    "description": "nur mit Debi und Kredi einsetzbar",
+                    "price": 2420
+                },
+                {
+                    "name": "Differenzmanagement",
+                    "description": "",
+                    "price": 2420
+                },
+                {
+                    "name": "Bilanzkonto-Splitting",
+                    "description": "",
+                    "price": 2420
+                },
+                {
+                    "name": "Verbandmanagement",
+                    "description": "",
+                    "price": 3680
+                }
+            ],
+            "additional": [
+                {
+                    "name": "Zusatzuser pro Hauptmodul",
+                    "description": "",
+                    "ranges": [
+                        {
+                            "range": "1-10",
+                            "price": 2100
+                        },
+                        {
+                            "range": "11+",
+                            "price": 1050
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Personal",
+            "description": "",
+            "modules": [
+                {
+                    "name": "Lohnbuchhaltung und Personaladministration",
+                    "description": "",
+                    "price": 4520
+                },
+                {
+                    "name": "Personalinformationssystem (PIS): Bewerbung, Entwicklung/ Ausbildung, Qualifikation",
+                    "description": "",
+                    "price": 4520
+                },
+                {
+                    "name": "Personalinformationssystem (PIS): pro Einzelmodul (Bewerbung, Entwicklung/ Ausbildung, Qualifikation)",
+                    "description": "",
+                    "price": 1890
+                },
+                {
+                    "name": "Personaldokumentenmanagement (PDM)",
+                    "description": "",
+                    "price": 1890
+                },
+                {
+                    "name": "Absenzenmanagement",
+                    "description": "",
+                    "price": 1890
+                },
+                {
+                    "name": "Nettolohnausgleich (Taggelder)",
+                    "description": "",
+                    "price": 900
+                },
+                {
+                    "name": "Datenexport Direct (Flaffile)",
+                    "description": "",
+                    "price": 480
+                },
+                {
+                    "name": "Einheitliches Lohnmeldeverfahren (ELM)",
+                    "description": "",
+                    "price": 480
+                },
+                {
+                    "name": "E-Mail Versand Lohnabrechnung",
+                    "description": "",
+                    "price": 430
+                },
+                {
+                    "name": "Spesenmanagement",
+                    "description": "",
+                    "price": 2730
+                },
+                {
+                    "name": "Zeugnismanager",
+                    "description": "",
+                    "price": 2100
+                },
+                {
+                    "name": "Zeugnismanager (Flat-Fee)",
+                    "description": "bis 100 Mitarbeiter, jährlich",
+                    "price": 630
+                },
+                {
+                    "name": "Zeugnismanager (Flat-Fee)",
+                    "description": "bis 200 Mitarbeiter, jährlich",
+                    "price": 1050
+                },
+                {
+                    "name": "E-Rekrutierung (Refline)",
+                    "description": "gemäss Preisliste Abraxas",
+                    "price": 1000
+                }
+            ],
+            "additional": [
+                {
+                    "name": "Zusatzuser pro Hauptmodul",
+                    "description": "",
+                    "ranges": [
+                        {
+                            "range": "1-10",
+                            "price": 2100
+                        },
+                        {
+                            "range": "11+",
+                            "price": 1050
+                        }
+                    ]
+                },
+                {
+                    "name": "Mitarbeiter-Multiplikator",
+                    "description": "This is a description for the employee multiplier...",
+                    "ranges": [
+                        {
+                            "range": "0-20",
+                            "multiplier": 1.0
+                        },
+                        {
+                            "range": "21-50",
+                            "multiplier": 1.4
+                        },
+                        {
+                            "range": "51-100",
+                            "multiplier": 2.0
+                        },
+                        {
+                            "range": "101-200",
+                            "multiplier": 2.8
+                        },
+                        {
+                            "range": "201-350",
+                            "multiplier": 3.4
+                        },
+                        {
+                            "range": "351-500",
+                            "multiplier": 3.8
+                        },
+                        {
+                            "range": "501-750",
+                            "multiplier": 4.7
+                        },
+                        {
+                            "range": "751-1000",
+                            "multiplier": 5.3
+                        },
+                        {
+                            "range": "1001-1500",
+                            "multiplier": 6.5
+                        },
+                        {
+                            "range": "1501-2000",
+                            "multiplier": 7.5
+                        },
+                        {
+                            "range": "2001-2500",
+                            "multiplier": 8.4
+                        },
+                        {
+                            "range": "2501-3000",
+                            "multiplier": 9.2
+                        },
+                        {
+                            "range": "3001+",
+                            "baseMultiplier": 9.2,
+                            "additionalPer500": 0.6
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

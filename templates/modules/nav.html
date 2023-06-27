@@ -1,0 +1,66 @@
+<style>
+    .sticky-navbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.15);
+        background-color: var(--background-color);
+    }
+</style>
+
+<nav role="nav" aria-label="Main Navigation" class="sticky-navbar">
+    <ul>
+        <li>
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/azure-icon.svg') }}" alt="Azure logo" width="50"
+                    height="50" />
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="{{ url_for('index') }}" 
+                {%- if request.endpoint == 'index' %} role="button" {%- endif %}>
+                Offertenübersicht
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('clients') }}" 
+                {%- if request.endpoint == 'clients' %} role="button" {%- endif %}>
+                Lizenzenübersicht
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('new_offer_abacus') }}" 
+                {%- if request.endpoint == 'new_offer_abacus' %} role="button" {%- endif %}>
+                Neu Abacus
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('new_offer_infoniqa') }}"
+                {%- if request.endpoint == 'new_offer_infoniqa' %} role="button" {%- endif %}>
+                Neu Infoniqa
+            </a>
+        </li>
+    </ul>
+    
+    <ul>
+        <li>
+            <fieldset>
+                <label for="switch">
+                    <input type="checkbox" id="switch" name="switch" role="switch" data-theme-switcher>
+                    Dark Mode
+                    <script>
+                        (function () {
+                            var storageKey = 'picoPreferredColorScheme';
+                            var theme = localStorage.getItem(storageKey) || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                            document.getElementById('switch').checked = (theme === 'dark') ? true : false;
+                        })();
+                    </script>
+                </label>
+            </fieldset>
+        </li>
+    </ul>
+</nav>
